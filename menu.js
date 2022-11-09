@@ -1,21 +1,26 @@
-const board = document.querySelectorAll(".board");
-const menu = document.querySelectorAll("#project .change");
+const int = document.querySelectorAll(".interaction");
+const target = document.querySelectorAll(".target-filter");
+const text = document.querySelectorAll(".height-text");
 const description = document.querySelector("#title p");
-// board.forEach((element, index) => {
-//     element.addEventListener("mouseover", ()=>{
-//        const target = index;
-//         menu.forEach((element, index) =>{
-//             if(target==index)
-//            { menu[index].classList.add("active");
-//             console.log( menu[index]);}
-//             else
-//             menu[index].classList.remove("active");
-//         });
-       
-//     });
+int.forEach((element) => {
 
-// })
-function toggle(index) {
-    
-    // document.getElementById("demo").innerHTML = "Hello World";
-}
+    element.addEventListener("mouseenter", () => {
+        // element.classList.add("grey-filter")
+        text.forEach((element) => {
+            element.classList.add("grey-filter")
+        });
+        target.forEach((element) => {
+            console.log(element);
+            element.classList.add("grey-filter")
+        });
+    });
+    element.addEventListener("mouseleave", () => {
+        text.forEach((element) => {
+            element.classList.remove("grey-filter");
+        });
+        target.forEach((element) => {
+            element.classList.remove("grey-filter")
+
+        });
+    });
+})

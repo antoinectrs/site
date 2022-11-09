@@ -1,4 +1,5 @@
 var autoPlayVideo = document.querySelectorAll(".loading");
+console.log(autoPlayVideo);
 autoPlayVideo.forEach(element => {
         element.oncanplaythrough = function() {
             element.muted = true;
